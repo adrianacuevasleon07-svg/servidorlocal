@@ -1,0 +1,502 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#5516be",
+              "on-error-container": "#ffdad6",
+              "secondary-fixed-dim": "#d0bcff",
+              "tertiary-fixed": "#c4e7ff",
+              "surface-container-high": "#222a3d",
+              "surface-container-lowest": "#060e20",
+              "on-primary-container": "#0d0096",
+              "tertiary-fixed-dim": "#7bd0ff",
+              "on-error": "#690005",
+              "on-background": "#dae2fd",
+              error: "#ffb4ab",
+              "surface-tint": "#c0c1ff",
+              "secondary-container": "#571bc1",
+              "on-surface": "#dae2fd",
+              "primary-fixed": "#e1e0ff",
+              "secondary-fixed": "#e9ddff",
+              "primary-fixed-dim": "#c0c1ff",
+              "on-secondary-container": "#c4abff",
+              "surface-container": "#171f33",
+              "outline-variant": "#464554",
+              background: "#0b1326",
+              "surface-bright": "#31394d",
+              primary: "#c0c1ff",
+              secondary: "#d0bcff",
+              "primary-container": "#8083ff",
+              "inverse-primary": "#494bd6",
+              "on-primary-fixed-variant": "#2f2ebe",
+              "inverse-on-surface": "#283044",
+              "inverse-surface": "#dae2fd",
+              "on-secondary": "#3c0091",
+              surface: "#0b1326",
+              tertiary: "#7bd0ff",
+              outline: "#908fa0",
+              "tertiary-container": "#009bd1",
+              "surface-container-low": "#131b2e",
+              "surface-dim": "#0b1326",
+              "surface-container-highest": "#2d3449",
+              "on-primary": "#1000a9",
+              "on-tertiary": "#00354a",
+              "on-surface-variant": "#c7c4d7",
+              "on-secondary-fixed": "#23005c",
+              "surface-variant": "#2d3449",
+              "on-tertiary-fixed-variant": "#004c69",
+              "error-container": "#93000a",
+              "on-tertiary-fixed": "#001e2c",
+              "on-tertiary-container": "#002d40",
+              "on-primary-fixed": "#07006c",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "space-lg": "1.5rem",
+              "space-xs": "0.25rem",
+              "space-sm": "0.5rem",
+              gutter: "1.5rem",
+              margin: "2rem",
+              "space-md": "1rem",
+              "space-xl": "2.5rem",
+            },
+            fontFamily: {
+              "headline-md": ["Geist"],
+              "headline-lg": ["Geist"],
+              "headline-sm": ["Geist"],
+              "body-sm": ["Geist"],
+              "headline-lg-mobile": ["Geist"],
+              "security-meta": ["JetBrains Mono"],
+              "code-otp": ["JetBrains Mono"],
+              "label-md": ["Geist"],
+              display: ["Geist"],
+              "label-lg": ["Geist"],
+              "body-lg": ["Geist"],
+              "body-md": ["Geist"],
+              "label-sm": ["Geist"],
+            },
+            fontSize: {
+              "headline-md": [
+                "22px",
+                {
+                  lineHeight: "30px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-lg": [
+                "30px",
+                {
+                  lineHeight: "38px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-sm": [
+                "18px",
+                {
+                  lineHeight: "26px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-sm": [
+                "13px",
+                { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "headline-lg-mobile": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "600",
+                },
+              ],
+              "security-meta": [
+                "11px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.04em",
+                  fontWeight: "400",
+                },
+              ],
+              "code-otp": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "0.18em",
+                  fontWeight: "500",
+                },
+              ],
+              "label-md": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.015em",
+                  fontWeight: "500",
+                },
+              ],
+              display: [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "-0.025em",
+                  fontWeight: "600",
+                },
+              ],
+              "label-lg": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-lg": [
+                "16px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "-0.005em",
+                  fontWeight: "400",
+                },
+              ],
+              "body-md": [
+                "14px",
+                { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "label-sm": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "500",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-background font-body-md text-body-md text-on-surface relative overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <div
+      class="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(128,131,255,0.16),rgba(11,19,38,0))]"
+    ></div>
+    <div
+      class="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_110%,rgba(0,155,209,0.08),rgba(11,19,38,0))]"
+    ></div>
+    <div
+      class="relative z-10 w-full min-h-screen flex flex-col justify-between p-margin"
+    >
+      <div class="w-full flex items-center justify-between">
+        <div class="flex items-center gap-space-sm">
+          <img
+            alt="Nexus Shield Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1UnVLUFcD0gVejiY9fnPox-JVM9aDSrQnZP9B3Ibd5RTgcm7-jxQtXvKtzjjbruBD9wwa4RUoi_QltP3OyqUYagSEOCisv_5FUAoRFsaOA3mnpBRyo-H4N8wCE9U-8lPgNivNEVZJHr7WPaAb085lSckobT38W05C1T5wWPHjRag5QL6KlpMbohgHydaifG5tT5iC69xHxkiGo_oWHDwixpr84Hary2j04J9sVbIWiXzcNfgCh5Z-vPLkP5"
+          /><span
+            class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-semibold"
+            >Nexus Shield</span
+          >
+        </div>
+        <a
+          class="inline-flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+          href="#"
+          ><span class="material-symbols-outlined text-[18px]">arrow_back</span
+          ><span>Back to gateway</span></a
+        >
+      </div>
+      <main class="w-full flex-1 flex items-center justify-center my-space-xl">
+        <div class="flex flex-col w-full items-center justify-center">
+          <div class="w-full max-w-[460px] relative">
+            <div
+              class="absolute -top-16 -left-16 w-56 h-56 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"
+            ></div>
+            <div
+              class="absolute -bottom-16 -right-16 w-56 h-56 bg-tertiary-container/15 rounded-full blur-3xl pointer-events-none"
+            ></div>
+            <div
+              class="relative bg-surface-container-low/80 backdrop-blur-2xl rounded-xl shadow-2xl p-space-xl overflow-hidden"
+            >
+              <div
+                class="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-primary-container to-transparent opacity-75"
+              ></div>
+              <div class="flex items-center justify-between mb-space-lg">
+                <div
+                  class="inline-flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container-highest/60 text-tertiary font-security-meta text-security-meta tracking-wider uppercase"
+                >
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"
+                  ></span>
+                  <span>Gateway Activo</span>
+                </div>
+                <div
+                  class="font-security-meta text-security-meta text-outline flex items-center gap-1"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >shield</span
+                  >
+                  <span>NEXUS-AUTH-V4</span>
+                </div>
+              </div>
+              <header class="mb-space-lg">
+                <h1
+                  class="font-headline-lg text-headline-lg text-on-surface mb-space-xs font-semibold"
+                >
+                  Registrarse
+                </h1>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Bienvenido. ingresa tus datos para la creacion de tu cuenta
+                </p>
+              </header>
+              
+              <form
+                class="space-y-space-md"
+                id="auth-form"
+                action="registro"
+                method="POST"
+              >
+                <div class="flex flex-col gap-space-xs">
+                  <label
+                    class="font-label-md text-label-md text-on-surface-variant flex items-center justify-between"
+                    for="email-field"
+                  >
+                    <span>Correo electrónico</span>
+                    <span
+                      class="font-security-meta text-security-meta text-outline opacity-70"
+                      >RFC 5322</span
+                    >
+                  </label>
+                  <div class="relative flex items-center">
+                    <span
+                      class="material-symbols-outlined absolute left-3.5 text-outline text-[18px] pointer-events-none transition-colors duration-200"
+                      >mail</span
+                    >
+                    <input
+                      autocomplete="email"
+                      class="w-full h-11 pl-11 pr-4 bg-surface-container-lowest text-on-surface placeholder:text-outline/50 font-body-md text-body-md rounded-lg outline-none focus:bg-surface-container-low transition-all duration-200 shadow-inner"
+                      id="email-field"
+                      placeholder="nombre@empresa.com"
+                      required=""
+                      type="email"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center justify-between">
+                    <label
+                      class="font-label-md text-label-md text-on-surface-variant"
+                      for="password-field"
+                      >Contraseña</label
+                    >
+                    <a
+                      class="font-label-sm text-label-sm text-primary hover:text-primary-fixed transition-colors"
+                      href="#"
+                      
+                  </div>
+                  <div class="relative flex items-center">
+                    <span
+                      class="material-symbols-outlined absolute left-3.5 text-outline text-[18px] pointer-events-none transition-colors duration-200"
+                      >lock</span
+                    >
+                    <input
+                      autocomplete="current-password"
+                      class="w-full h-11 pl-11 pr-11 bg-surface-container-lowest text-on-surface placeholder:text-outline/50 font-body-md text-body-md rounded-lg outline-none focus:bg-surface-container-low transition-all duration-200 shadow-inner"
+                      id="password-field"
+                      placeholder="••••••••••••"
+                      required=""
+                      type="password"
+                    />
+                    <button
+                      aria-label="Alternar visibilidad de contraseña"
+                      class="absolute right-3.5 text-outline hover:text-on-surface p-0.5 rounded transition-colors"
+                      id="toggle-pwd"
+                      onclick="togglePasswordVisibility()"
+                      type="button"
+                    >
+                      <span
+                        class="material-symbols-outlined text-[18px]"
+                        id="pwd-icon"
+                        >visibility</span
+                      >
+                    </button>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between pt-1">
+                  <label
+                    class="group flex items-center gap-space-sm cursor-pointer select-none"
+                  >
+                    <div class="relative flex items-center justify-center">
+                      <input
+                        checked=""
+                        class="peer sr-only"
+                        id="remember-device"
+                        type="checkbox"
+                      />
+                      <div
+                        class="w-4 h-4 rounded bg-surface-container-lowest peer-checked:bg-primary transition-all duration-200 flex items-center justify-center shadow-inner"
+                      >
+                        <span
+                          class="material-symbols-outlined text-[14px] text-on-primary scale-0 peer-checked:scale-100 transition-transform duration-200 font-bold"
+                          >check</span
+                        >
+                      </div>
+                    </div>
+                    
+                  </label>
+                </div>
+                <button
+                  class="relative w-full h-11 mt-space-sm rounded-lg bg-gradient-to-r from-[#6366f1] to-[#4f46e5] hover:from-[#5457eb] hover:to-[#4338ca] text-white font-label-lg text-label-lg shadow-lg shadow-indigo-500/25 active:scale-[0.99] transition-all duration-200 flex items-center justify-center gap-space-xs overflow-hidden"
+                  id="submit-btn"
+                  type="submit"
+                >
+                  <span class="flex items-center gap-2" id="btn-text">
+                    <span>Crear Cuenta</span>
+                    <span class="material-symbols-outlined text-[18px]"
+                      >arrow_forward</span
+                    >
+                  </span>
+                  <span class="hidden items-center gap-2" id="btn-spinner">
+                    <svg
+                      class="animate-spin h-5 w-5 text-white"
+                      fill="none"
+                      viewbox="0 0 24 24"
+                    >
+                      <circle
+                        class="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        stroke-width="4"
+                      ></circle>
+                      <path
+                        class="opacity-75"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        fill="currentColor"
+                      ></path>
+                    
+                </button>
+              </form>
+              <div
+                class="mt-space-lg pt-space-md bg-surface-container/30 -mx-space-xl -mb-space-xl px-space-xl pb-space-lg text-center flex flex-col gap-space-md"
+              >
+                
+                </p>
+                <div
+                  class="flex items-center justify-center gap-2 text-outline font-security-meta text-security-meta"
+                >
+                  <span
+                    class="material-symbols-outlined text-[16px] text-tertiary"
+                    >lock_person</span
+                  >
+                  
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-center gap-space-md mt-space-md text-outline font-security-meta text-security-meta"
+            >
+              
+              <span>•</span>
+              
+              <span>•</span>
+              
+            </div>
+          </div>
+          <script>
+            function togglePasswordVisibility() {
+              const pwdInput = document.getElementById("password-field");
+              const pwdIcon = document.getElementById("pwd-icon");
+              if (!pwdInput || !pwdIcon) return;
+              if (pwdInput.type === "password") {
+                pwdInput.type = "text";
+                pwdIcon.textContent = "visibility_off";
+              } else {
+                pwdInput.type = "password";
+                pwdIcon.textContent = "visibility";
+              }
+            }
+
+            function triggerAuth() {
+              const btn = document.getElementById("submit-btn");
+              const text = document.getElementById("btn-text");
+              const spinner = document.getElementById("btn-spinner");
+              if (!btn || !text || !spinner) return;
+
+              text.classList.add("hidden");
+              spinner.classList.remove("hidden");
+              spinner.classList.add("flex");
+              btn.disabled = true;
+
+              setTimeout(() => {
+                spinner.classList.add("hidden");
+                spinner.classList.remove("flex");
+                text.classList.remove("hidden");
+                btn.disabled = false;
+              }, 1600);
+            }
+          </script>
+        </div>
+      </main>
+      <div
+        class="w-full flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-security-meta text-security-meta"
+      >
+        <div class="flex items-center gap-space-xs">
+          
+      </div>
+    </div>
+  </body>
+</html>
+

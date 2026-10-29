@@ -30,8 +30,16 @@ def musico(request):
         musico.save()
     
             
-            
-            
+def usuario_view(request):   
+    if request.method == "GET":  
+        return render(request, "usuario.html", ) 
+
+def registro_view(request):   
+    if request.method == "POST":  
+        print(request.POST) 
+    
+    
+    
     
 
 

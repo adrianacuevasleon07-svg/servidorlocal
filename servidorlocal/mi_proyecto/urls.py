@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('encuestas/', include('encuestas.urls')),
     path('', views.gato, name='gato'),
+ 
 ]
